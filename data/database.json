@@ -74,6 +74,39 @@
       "balance": 49474,
       "createdAt": "2023-12-07T04:39:38.383Z",
       "modifiedAt": "2024-03-07T00:07:36.510Z"
+    },
+    {
+      "id": "V-9XSO-dv",
+      "uuid": "a34a58b2-27f8-49ad-b679-bb7d190ac4b7",
+      "firstName": "Gabriel",
+      "lastName": "Gouvea",
+      "username": "gouvea77",
+      "password": "$2a$10$DdDdEi8pAK2fDuCP3sajPuhJb3P4aFzMK2llNX9VzcqnBtRn80r1W",
+      "balance": 0,
+      "createdAt": "2025-06-03T16:22:07.758Z",
+      "modifiedAt": "2025-06-03T16:22:07.758Z"
+    },
+    {
+      "id": "kSe2sE9HY",
+      "uuid": "c5e53027-8815-43d3-9c9e-2c7e6d7ceb9c",
+      "firstName": "Gabriel",
+      "lastName": "Gouvea",
+      "username": "gouvea77",
+      "password": "$2a$10$2OrWBD78osIN9pRxBJFkQOZBZfVcxT4ePXoSqtphB8Ex9RhK3sXp6",
+      "balance": 0,
+      "createdAt": "2025-06-03T16:23:17.476Z",
+      "modifiedAt": "2025-06-03T16:23:17.476Z"
+    },
+    {
+      "id": "18FfcI7jU",
+      "uuid": "985f65d0-27c3-4804-95d7-07aa16d4bc94",
+      "firstName": "Gabriel",
+      "lastName": "Gouvea",
+      "username": "gouvea77",
+      "password": "$2a$10$dngU49/6TLakaaX8.19w2u3emP7cyOCtr/rjDoDiROCwW4RicCmnu",
+      "balance": 0,
+      "createdAt": "2025-06-03T16:48:41.455Z",
+      "modifiedAt": "2025-06-03T16:48:41.455Z"
     }
   ],
   "contacts": [
@@ -9951,6 +9984,18 @@
       "status": "complete",
       "createdAt": "2025-06-03T16:10:01.110Z",
       "modifiedAt": "2025-06-03T16:10:01.110Z"
+    },
+    {
+      "id": "oK4TuvM3P",
+      "uuid": "c99aa9e3-b511-4250-a865-f49a3b558153",
+      "amount": 100,
+      "description": "Transfer Test",
+      "receiverId": "uBmeaz5pX",
+      "senderId": "_XblMqbuoP",
+      "privacyLevel": "contacts",
+      "status": "complete",
+      "createdAt": "2025-06-03T16:22:00.396Z",
+      "modifiedAt": "2025-06-03T16:22:00.396Z"
     }
   ],
   "likes": [
@@ -10607,6 +10652,16 @@
       "isRead": false,
       "createdAt": "2025-06-03T16:10:01.131Z",
       "modifiedAt": "2025-06-03T16:10:01.131Z"
+    },
+    {
+      "id": "dnQVP6OPgU",
+      "uuid": "805ad8c7-e029-48c9-9cd9-832a49bcbd89",
+      "userId": "uBmeaz5pX",
+      "transactionId": "oK4TuvM3P",
+      "status": "received",
+      "isRead": false,
+      "createdAt": "2025-06-03T16:22:00.415Z",
+      "modifiedAt": "2025-06-03T16:22:00.415Z"
     }
   ],
   "banktransfers": [
@@ -11219,6 +11274,16 @@
       "type": "withdrawal",
       "createdAt": "2025-06-03T16:10:01.115Z",
       "modifiedAt": "2025-06-03T16:10:01.115Z"
+    },
+    {
+      "id": "71OGr9XLSa",
+      "uuid": "4e00ad9a-86a0-4a0e-89c2-109ceeb496ee",
+      "userId": "_XblMqbuoP",
+      "amount": 100,
+      "transactionId": "oK4TuvM3P",
+      "type": "withdrawal",
+      "createdAt": "2025-06-03T16:22:00.399Z",
+      "modifiedAt": "2025-06-03T16:22:00.399Z"
     }
   ]
 }

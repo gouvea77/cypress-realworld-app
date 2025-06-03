@@ -6,7 +6,40 @@ const loginPage = new LoginPage();
 const signUpPage = new SignUpPage();
 
 describe("Testando a funcionalidade de criar novos usuários", () => {
-  it("Deve exibir mensagens de erro ao tentar registrar um novo usuário sem preencher todas as informações obrigatórias", () => {
+  it("Deve exibir mensagens de erro ao tentar registrar um novo usuário sem o First Name", () => {
+    cy.visit("http://localhost:3000/signin");
+    loginPage.clickButtonSignUp();
+    signUpPage.createWithoutFirstName(
+      userData.newUser.userLastName,
+      userData.newUser.password,
+      "teste",
+      "teste"
+    );
+  });
+
+  it("Deve exibir mensagens de erro ao tentar registrar um novo usuário sem o Last Name", () => {
+    cy.visit("http://localhost:3000/signin");
+    loginPage.clickButtonSignUp();
+    signUpPage.createWithoutlastName(
+      userData.newUser.userFirstName,
+      userData.newUser.password,
+      "teste",
+      "teste"
+    );
+  });
+
+  it("Deve exibir mensagens de erro ao tentar registrar um novo usuário sem o Password", () => {
+    cy.visit("http://localhost:3000/signin");
+    loginPage.clickButtonSignUp();
+    signUpPage.createWithoutPassword(
+      userData.newUser.userFirstName,
+      userData.newUser.userLastName,
+      "teste",
+      "teste"
+    );
+  });
+
+  it("Deve exibir mensagens de erro ao tentar registrar um novo usuário sem preencher a senha igual", () => {
     cy.visit("http://localhost:3000/signin");
     loginPage.clickButtonSignUp();
     signUpPage.createNewUser(
@@ -18,7 +51,8 @@ describe("Testando a funcionalidade de criar novos usuários", () => {
     );
     signUpPage.checkPasswordMatch();
   });
-  it.only("Deve registrar um novo usuário com informações válidas", () => {
+
+  it("Deve registrar um novo usuário com informações válidas", () => {
     cy.visit("http://localhost:3000/signin");
     loginPage.clickButtonSignUp();
     signUpPage.createNewUser(
