@@ -20,7 +20,7 @@ describe("Testando a funcionalidade de criar novos usuários", () => {
   it("Deve exibir mensagens de erro ao tentar registrar um novo usuário sem o Last Name", () => {
     cy.visit("http://localhost:3000/signin");
     loginPage.clickButtonSignUp();
-    signUpPage.createWithoutlastName(
+    signUpPage.createWithoutLastName(
       userData.newUser.userFirstName,
       userData.newUser.password,
       "teste",
@@ -52,7 +52,7 @@ describe("Testando a funcionalidade de criar novos usuários", () => {
     signUpPage.checkPasswordMatch();
   });
 
-  it("Deve registrar um novo usuário com informações válidas", () => {
+  it.only("Deve registrar um novo usuário com informações válidas", () => {
     cy.visit("http://localhost:3000/signin");
     loginPage.clickButtonSignUp();
     signUpPage.createNewUser(

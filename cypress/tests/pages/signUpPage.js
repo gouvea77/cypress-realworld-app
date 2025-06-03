@@ -13,38 +13,38 @@ class SignUpPage {
     return selectors;
   }
 
-  createNewUser(firstName, lastName, userName, password, conrfirmPassword) {
+  createNewUser(firstName, lastName, userName, password, confirmPassword) {
     cy.get(this.selectorList().firstNameField).type(firstName);
     cy.get(this.selectorList().lastNameField).type(lastName);
     cy.get(this.selectorList().userNameField).type(userName);
     cy.get(this.selectorList().passwordField).type(password);
-    cy.get(this.selectorList().confirmPasswordField).type(conrfirmPassword);
+    cy.get(this.selectorList().confirmPasswordField).type(confirmPassword);
   }
 
-  createWithoutFirstName(lastName, userName, password, conrfirmPassword) {
+  createWithoutFirstName(lastName, userName, password, confirmPassword) {
     cy.get(this.selectorList().firstNameField).click();
     cy.get(this.selectorList().lastNameField).type(lastName);
     cy.get(this.selectorList().userNameField).type(userName);
     cy.get(this.selectorList().passwordField).type(password);
-    cy.get(this.selectorList().confirmPasswordField).type(conrfirmPassword);
+    cy.get(this.selectorList().confirmPasswordField).type(confirmPassword);
     cy.contains("First Name is required").should("be.visible");
   }
 
-  createWithoutlastName(firstName, userName, password, conrfirmPassword) {
+  createWithoutLastName(firstName, userName, password, confirmPassword) {
     cy.get(this.selectorList().firstNameField).type(firstName);
     cy.get(this.selectorList().lastNameField).click();
     cy.get(this.selectorList().userNameField).type(userName);
     cy.get(this.selectorList().passwordField).type(password);
-    cy.get(this.selectorList().confirmPasswordField).type(conrfirmPassword);
+    cy.get(this.selectorList().confirmPasswordField).type(confirmPassword);
     cy.contains("Last Name is required").should("be.visible");
   }
 
-  createWithoutPassword(firstName, lastName, userName, conrfirmPassword) {
+  createWithoutPassword(firstName, lastName, userName, confirmPassword) {
     cy.get(this.selectorList().firstNameField).type(firstName);
     cy.get(this.selectorList().lastNameField).type(lastName);
     cy.get(this.selectorList().userNameField).type(userName);
     cy.get(this.selectorList().passwordField).click();
-    cy.get(this.selectorList().confirmPasswordField).type(conrfirmPassword);
+    cy.get(this.selectorList().confirmPasswordField).type(confirmPassword);
     cy.contains("Enter your password").should("be.visible");
   }
   clickButtonConfirm() {

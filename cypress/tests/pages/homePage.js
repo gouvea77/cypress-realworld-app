@@ -1,6 +1,8 @@
 import { should } from "chai";
 import tranferData from "../../fixtures/data-transactions.json";
 import { be } from "date-fns/locale";
+import userData from "../../fixtures/user-data.json";
+import { User } from "@auth0/auth0-react";
 
 class HomePage {
   selectorList() {
@@ -16,17 +18,11 @@ class HomePage {
       payButton: '[data-test="transaction-create-submit-payment"]',
       modal: "[role='dialog']",
       contact: '[data-test="user-list-item-GjWovtg2hr"]',
+      buttonMyTransactions: '[data-test="nav-personal-tab"]',
+      butttonHome: "[data-test='sidenav-home']",
     };
 
     return selectors;
-  }
-
-  createNewUser(firstName, lastName, userName, password, conrfirmPassword) {
-    cy.get(this.selectorList().firstNameField).type(firstName);
-    cy.get(this.selectorList().lastNameField).type(lastName);
-    cy.get(this.selectorList().userNameField).type(userName);
-    cy.get(this.selectorList().passwordField).type(password);
-    cy.get(this.selectorList().confirmPasswordField).type(conrfirmPassword);
   }
 
   clickNextButton() {
@@ -75,6 +71,21 @@ class HomePage {
           cy.contains("Paid").should("be.visible");
         }
       });
+  }
+
+  verifySuccessfulTransactionInHistory() {
+    cy.get(this.selectorList().butttonHome).click();
+    cy.get(this.selectorList().buttonMyTransactions).click();
+    cy.contains("Transfer Test").should("be.visible");
+    cy.contains(`${userData.userSuccess.firstName} ${userData.userSuccess.lastName} paid`).should(
+      "be.visible"
+    );
+  }
+
+  verifyNoTransactionHistory() {
+    cy.get(this.selectorList().butttonHome).click();
+    cy.get(this.selectorList().buttonMyTransactions).click();
+    cy.contains("No Transactions").should("be.visible");
   }
 }
 

@@ -2,12 +2,14 @@
   "newUser": {
     "userFirstName": "Gabriel",
     "userLastName": "Gouvea",
-    "username": "gouvea77",
+    "username": "gouvea",
     "password": "teste"
   },
   "userSuccess": {
-    "username": "Dina20",
-    "password": "s3cret"
+    "firstName": "Kristian",
+    "lastName": "Bradtke",
+    "username": "gouvea",
+    "password": "teste"
   },
   "userFail": {
     "username": "test",
