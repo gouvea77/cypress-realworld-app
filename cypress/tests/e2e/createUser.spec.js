@@ -58,8 +58,8 @@ describe("Testando a funcionalidade de criar novos usuários", () => {
     signUpPage.createNewUser(
       userData.newUser.userFirstName,
       userData.newUser.userLastName,
-      userData.newUser.username,
-      userData.newUser.password,
+      userData.userSuccess.username,
+      userData.userSuccess.password,
       userData.newUser.password
     );
     signUpPage.clickButtonConfirm();

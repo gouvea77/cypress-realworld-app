@@ -6,9 +6,7 @@
     "password": "teste"
   },
   "userSuccess": {
-    "firstName": "Kristian",
-    "lastName": "Bradtke",
-    "username": "gouvea",
+    "username": "teste123",
     "password": "teste"
   },
   "userFail": {
@@ -16,7 +14,9 @@
     "password": "123456"
   },
   "user": {
-    "username": "Heath93",
-    "password": "s3cret"
+    "username": "Arvilla_Hegmann",
+    "password": "s3cret",
+    "firstName": "Kristian",
+    "lastName": "Bradtke"
   }
 }

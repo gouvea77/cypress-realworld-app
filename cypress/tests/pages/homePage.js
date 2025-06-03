@@ -77,9 +77,7 @@ class HomePage {
     cy.get(this.selectorList().butttonHome).click();
     cy.get(this.selectorList().buttonMyTransactions).click();
     cy.contains("Transfer Test").should("be.visible");
-    cy.contains(`${userData.userSuccess.firstName} ${userData.userSuccess.lastName} paid`).should(
-      "be.visible"
-    );
+    cy.contains(`${userData.user.firstName} ${userData.user.lastName} paid`).should("be.visible");
   }
 
   verifyNoTransactionHistory() {
