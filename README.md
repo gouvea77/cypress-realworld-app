@@ -19,9 +19,7 @@ Testar fluxos reais como:
 ## Ferramentas Utilizadas
 
 - [Cypress](https://www.cypress.io/)
-- Mocha
-- JavaScript / TypeScript
-- GitHub Actions (CI)
+- JavaScript 
 
 ## Como executar os testes
 
