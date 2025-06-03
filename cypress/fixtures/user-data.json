@@ -1,0 +1,20 @@
+{
+  "newUser": {
+    "userFirstName": "Gabriel",
+    "userLastName": "Gouvea",
+    "username": "gouvea77",
+    "password": "teste"
+  },
+  "userSuccess": {
+    "username": "Dina20",
+    "password": "s3cret"
+  },
+  "userFail": {
+    "username": "test",
+    "password": "123456"
+  },
+  "user": {
+    "username": "Heath93",
+    "password": "s3cret"
+  }
+}

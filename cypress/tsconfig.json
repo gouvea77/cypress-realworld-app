@@ -1,6 +1,6 @@
 {
   "extends": "../tsconfig.json",
-  "include": ["./**/*.ts", "../cypress.d.ts"],
+  "include": ["./**/*.ts", "../cypress.d.ts", "tests/e2e/login.spec.js"],
   "exclude": [],
   "compilerOptions": {
     "types": ["cypress", "@percy/cypress"],
@@ -9,6 +9,6 @@
     "module": "commonjs",
     "moduleResolution": "node",
     "allowJs": true,
-    "noEmit": true,
-  },
+    "noEmit": true
+  }
 }
