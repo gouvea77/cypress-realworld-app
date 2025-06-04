@@ -9,7 +9,8 @@ const homePage = new HomePage();
 describe("Enviar dinheiro caso o saldo seja suficiente", () => {
   it("Deve enviar dinheiro com sucesso", () => {
     cy.visit("http://localhost:3000/signin");
-    loginPage.loginWithAnyUser(userData.userSuccess.username, userData.userSuccess.password);
+    loginPage.loginWithAnyUser(userData.user.username, userData.user.password);
+    loginPage.clickButtonSignIn();
     cy.contains("Account Balance").should("be.visible");
     homePage.skipModal();
     homePage.checkBalance(tranferData.newTransfer.sufficientAmount);
@@ -20,6 +21,7 @@ describe("Enviar dinheiro com saldo insuficiente", () => {
   it("Deve exibir mensagem de erro ao enviar dinheiro sem saldo suficiente", () => {
     cy.visit("http://localhost:3000/signin");
     loginPage.loginWithAnyUser(userData.userSuccess.username, userData.userSuccess.password);
+    loginPage.clickButtonSignIn();
     cy.contains("Account Balance").should("be.visible");
     homePage.skipModal();
     homePage.checkBalance(tranferData.newTransfer.insufficientAmount);

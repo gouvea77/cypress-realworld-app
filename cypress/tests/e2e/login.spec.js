@@ -4,15 +4,42 @@ import LoginPage from "../pages/loginPage";
 const loginPage = new LoginPage();
 
 describe("Cenários de Login", () => {
-  it("Erro ao logar com Usuário InVálido", () => {
+  it("Login com Usuário e Senha Válidos", () => {
+    cy.visit("http://localhost:3000/signin");
+    loginPage.loginWithAnyUser(userData.user.username, userData.user.password);
+    loginPage.clickButtonSignIn();
+    cy.contains("Account Balance").should("be.visible");
+  });
+
+  it("Erro ao Logar com Usuário Inválido", () => {
     cy.visit("http://localhost:3000/signin");
     loginPage.loginWithAnyUser(userData.userFail.username, userData.userFail.password);
+    loginPage.clickButtonSignIn();
     loginPage.checkLoginInvalidCredentials();
   });
 
-  it("Login com Usuário Válido", () => {
+  it("Erro ao Tentar Logar com Usuário Não Cadastrado", () => {
     cy.visit("http://localhost:3000/signin");
-    loginPage.loginWithAnyUser(userData.userSuccess.username, userData.userSuccess.password);
-    cy.contains("Account Balance").should("be.visible");
+    loginPage.loginWithAnyUser(userData.userFail.username, userData.user.password);
+    loginPage.clickButtonSignIn();
+    loginPage.checkLoginInvalidCredentials();
+  });
+
+  it("Erro ao tentar logar com usuário cadastrado e senha inválida", () => {
+    cy.visit("http://localhost:3000/signin");
+    loginPage.loginWithAnyUser(userData.user.username, userData.userFail.password);
+    loginPage.clickButtonSignIn();
+    loginPage.checkLoginInvalidCredentials();
+  });
+
+  it("Erro ao tentar logar sem preencher usuário e senha", () => {
+    cy.visit("http://localhost:3000/signin");
+    loginPage.clickButtonSignIn();
+    loginPage.checkUsernameRequiredError();
+  });
+
+  it("Acessar pagina de cadastro pelo login", () => {
+    cy.visit("http://localhost:3000/signin");
+    loginPage.clickButtonSignUp();
   });
 });

@@ -19,12 +19,22 @@ class LoginPage {
 
   loginWithAnyUser(username, password) {
     cy.get(this.selectorList().usernameField).type(username);
-    cy.get(this.selectorList().passwordField).type(password);
+
+    if (password) {
+      cy.get(this.selectorList().passwordField).type(password);
+    }
+  }
+
+  clickButtonSignIn() {
     cy.get(this.selectorList().buttonLogin).click();
   }
 
   checkLoginInvalidCredentials() {
     cy.contains("Username or password is invalid").should("be.visible");
+  }
+
+  checkUsernameRequiredError() {
+    cy.contains("Username is required").should("be.visible");
   }
 }
 
