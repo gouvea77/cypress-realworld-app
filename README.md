@@ -25,7 +25,7 @@ Testar fluxos reais como:
 
 1. Clone o projeto:
 ```bash
-git clone https://github.com/seu-usuario/cypress-realworld-app.git
+git clone https://github.com/gouvea77/cypress-realworld-app.git
 cd cypress-realworld-app
 yarn
 ```
