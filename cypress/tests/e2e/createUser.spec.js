@@ -52,7 +52,7 @@ describe("Testando a funcionalidade de criar novos usuários", () => {
     signUpPage.checkPasswordMatch();
   });
 
-  it.only("Deve registrar um novo usuário com informações válidas", () => {
+  it("Deve registrar um novo usuário com informações válidas", () => {
     cy.visit("http://localhost:3000/signin");
     loginPage.clickButtonSignUp();
     signUpPage.createNewUser(
