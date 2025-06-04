@@ -25,7 +25,7 @@ Testar fluxos reais como:
 
 1. Clone o projeto:
 ```bash
-git clone https://github.com/seu-usuario/cypress-realworld-app.git
+git clone https://github.com/gouvea77/cypress-realworld-app.git
 cd cypress-realworld-app
 yarn
 ```
@@ -140,6 +140,7 @@ Os testes cobrem cenários reais de uma aplicação financeira, focando tanto em
 
 
 
+🔗 [Planilha com os casos de teste](https://docs.google.com/spreadsheets/d/1jV7b_I7ku_e1gKTIXctP2S4-sKiL_5CY/edit?gid=838253256#gid=838253256)
 
 🔗 [Documentação oficial do projeto](https://github.com/cypress-io/cypress-realworld-app)
 
