@@ -39,7 +39,7 @@ describe("Testando a funcionalidade de criar novos usuários", () => {
     );
   });
 
-  it("Deve exibir mensagens de erro ao tentar registrar um novo usuário sem preencher a senha igual", () => {
+  it("Deve exibir mensagens de erro ao tentar registrar um novo usuário sem preencher as senhas iguais", () => {
     cy.visit("http://localhost:3000/signin");
     loginPage.clickButtonSignUp();
     signUpPage.createNewUser(
@@ -63,5 +63,10 @@ describe("Testando a funcionalidade de criar novos usuários", () => {
       userData.newUser.password
     );
     signUpPage.clickButtonConfirm();
+  });
+
+  it.only("Deve acessar a página de login", () => {
+    cy.visit("http://localhost:3000/signin");
+    signUpPage.clickButtonSignIn();
   });
 });

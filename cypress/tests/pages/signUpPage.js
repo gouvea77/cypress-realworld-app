@@ -8,6 +8,7 @@ class SignUpPage {
       confirmPasswordField: "#confirmPassword",
       buttonSignUp: '[data-test="signup-submit"]',
       messagePasswordDoesNotMatch: "#confirmPassword-helper-text",
+      buttonSignIn: ".MuiGrid-container > .MuiGrid-root",
     };
 
     return selectors;
@@ -52,6 +53,10 @@ class SignUpPage {
   }
   checkPasswordMatch() {
     cy.get(this.selectorList().messagePasswordDoesNotMatch).should("be.visible");
+  }
+
+  clickButtonSignIn() {
+    cy.get(this.selectorList().buttonSignIn).eq(0).click();
   }
 }
 
