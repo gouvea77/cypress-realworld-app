@@ -11,16 +11,9 @@ describe("Cenários de Login", () => {
     cy.contains("Account Balance").should("be.visible");
   });
 
-  it("Erro ao Logar com Usuário Inválido", () => {
+  it("Erro ao Logar com Usuário Não Registrado", () => {
     cy.visit("http://localhost:3000/signin");
     loginPage.loginWithAnyUser(userData.userFail.username, userData.userFail.password);
-    loginPage.clickButtonSignIn();
-    loginPage.checkLoginInvalidCredentials();
-  });
-
-  it("Erro ao Tentar Logar com Usuário Não Cadastrado", () => {
-    cy.visit("http://localhost:3000/signin");
-    loginPage.loginWithAnyUser(userData.userFail.username, userData.user.password);
     loginPage.clickButtonSignIn();
     loginPage.checkLoginInvalidCredentials();
   });

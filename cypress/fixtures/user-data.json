@@ -18,5 +18,11 @@
     "password": "s3cret",
     "firstName": "Kristian",
     "lastName": "Bradtke"
+  },
+  "userWithoutBalance": {
+    "username": "Reyes.Osinski",
+    "password": "s3cret",
+    "firstName": "Ruthie",
+    "lastName": "Prosacco"
   }
 }

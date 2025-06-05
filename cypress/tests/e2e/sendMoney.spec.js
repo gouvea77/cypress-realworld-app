@@ -20,7 +20,10 @@ describe("Enviar dinheiro caso o saldo seja suficiente", () => {
 describe("Enviar dinheiro com saldo insuficiente", () => {
   it("Deve exibir mensagem de erro ao enviar dinheiro sem saldo suficiente", () => {
     cy.visit("http://localhost:3000/signin");
-    loginPage.loginWithAnyUser(userData.userSuccess.username, userData.userSuccess.password);
+    loginPage.loginWithAnyUser(
+      userData.userWithoutBalance.username,
+      userData.userWithoutBalance.password
+    );
     loginPage.clickButtonSignIn();
     cy.contains("Account Balance").should("be.visible");
     homePage.skipModal();
