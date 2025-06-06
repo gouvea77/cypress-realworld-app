@@ -11,7 +11,7 @@
       "phoneNumber": "398-225-9900",
       "avatar": "https://avatars.dicebear.com/api/human/uBmeaz5pX.svg",
       "defaultPrivacyLevel": "public",
-      "balance": 10000000000000200000,
+      "balance": 10000000000000152000,
       "createdAt": "2023-03-09T22:26:40.101Z",
       "modifiedAt": "2024-03-07T10:07:57.580Z"
     },
@@ -26,7 +26,7 @@
       "phoneNumber": "410-786-2112",
       "avatar": "https://avatars.dicebear.com/api/human/GjWovtg2hr.svg",
       "defaultPrivacyLevel": "private",
-      "balance": 42826,
+      "balance": 92926,
       "createdAt": "2023-04-23T13:52:10.979Z",
       "modifiedAt": "2024-03-07T09:07:46.709Z"
     },
@@ -74,17 +74,6 @@
       "balance": 49474,
       "createdAt": "2023-12-07T04:39:38.383Z",
       "modifiedAt": "2024-03-07T00:07:36.510Z"
-    },
-    {
-      "id": "Sb0b0tvh6",
-      "uuid": "482f045a-2538-4efa-985c-353d6ca8d6d6",
-      "firstName": "Gabriel",
-      "lastName": "Gouvea",
-      "username": "gabrielgouvea77",
-      "password": "$2a$10$GrO1ffcGlezeZrtU0mpcxudNcwZ3Z53k4R8MHQIvjSG8ZWDq3ymYS",
-      "balance": 0,
-      "createdAt": "2025-06-06T12:10:04.499Z",
-      "modifiedAt": "2025-06-06T12:10:04.499Z"
     }
   ],
   "contacts": [
@@ -264,17 +253,6 @@
       "isDeleted": false,
       "createdAt": "2024-01-26T14:01:01.815Z",
       "modifiedAt": "2024-03-07T08:44:31.174Z"
-    },
-    {
-      "id": "ADqCzYAI9",
-      "uuid": "c891fbdc-3949-4188-a7da-d2628bbc13a0",
-      "userId": "Sb0b0tvh6",
-      "bankName": "Nubank",
-      "accountNumber": "2199999999",
-      "routingNumber": "1 234 44 ",
-      "isDeleted": false,
-      "createdAt": "2025-06-06T12:10:07.626Z",
-      "modifiedAt": "2025-06-06T12:10:07.626Z"
     }
   ],
   "transactions": [
@@ -9879,52 +9857,28 @@
       "modifiedAt": "2024-03-07T21:58:09.668Z"
     },
     {
-      "id": "NvYYHVfaD",
-      "uuid": "a75d21b6-9165-41c4-af71-601fd877bc11",
+      "id": "pr44Ptix3",
+      "uuid": "38097dd5-7149-400e-9492-ac27e460e9c4",
       "amount": 100,
       "description": "Transfer Test",
       "receiverId": "uBmeaz5pX",
       "senderId": "GjWovtg2hr",
       "privacyLevel": "private",
       "status": "complete",
-      "createdAt": "2025-06-06T12:10:12.224Z",
-      "modifiedAt": "2025-06-06T12:10:12.224Z"
+      "createdAt": "2025-06-06T14:21:58.958Z",
+      "modifiedAt": "2025-06-06T14:21:58.958Z"
     },
     {
-      "id": "fFNmg3c1-",
-      "uuid": "730cfeab-1abf-44b8-8ce3-c1b8a5fef1d1",
-      "amount": 100,
-      "description": "Transfer Test",
-      "receiverId": "uBmeaz5pX",
-      "senderId": "GjWovtg2hr",
-      "privacyLevel": "private",
-      "status": "complete",
-      "createdAt": "2025-06-06T12:10:49.734Z",
-      "modifiedAt": "2025-06-06T12:10:49.734Z"
-    },
-    {
-      "id": "noDUDneCS",
-      "uuid": "a520e0d8-5bb5-42ab-a1d0-b09e452d4561",
+      "id": "IAg4alNe9",
+      "uuid": "2d9d2ada-9cfe-472a-8b6f-5418234d697e",
       "amount": 10000000000000000000,
       "description": "Transfer Test",
       "receiverId": "uBmeaz5pX",
       "senderId": "M1ty1gR8B3",
       "privacyLevel": "private",
       "status": "complete",
-      "createdAt": "2025-06-06T12:10:53.688Z",
-      "modifiedAt": "2025-06-06T12:10:53.688Z"
-    },
-    {
-      "id": "KNm4Oenjy",
-      "uuid": "e5dbeb25-57a8-4fcc-8b07-08d4e6437d93",
-      "amount": 50000,
-      "description": "test",
-      "receiverId": "uBmeaz5pX",
-      "senderId": "GjWovtg2hr",
-      "privacyLevel": "private",
-      "status": "complete",
-      "createdAt": "2025-06-06T12:22:24.228Z",
-      "modifiedAt": "2025-06-06T12:22:24.228Z"
+      "createdAt": "2025-06-06T14:22:03.152Z",
+      "modifiedAt": "2025-06-06T14:22:03.152Z"
     }
   ],
   "likes": [
@@ -10503,44 +10457,24 @@
       "modifiedAt": "2024-03-07T17:13:52.110Z"
     },
     {
-      "id": "4P0QdZoXzQ",
-      "uuid": "698dfd1c-0321-4ab2-999b-f9eb1f72f350",
+      "id": "YitP9oyqwQ",
+      "uuid": "d62ffbfe-0ca5-44c0-b20e-1f54215e0ada",
       "userId": "uBmeaz5pX",
-      "transactionId": "NvYYHVfaD",
+      "transactionId": "pr44Ptix3",
       "status": "received",
       "isRead": false,
-      "createdAt": "2025-06-06T12:10:12.241Z",
-      "modifiedAt": "2025-06-06T12:10:12.241Z"
+      "createdAt": "2025-06-06T14:21:58.974Z",
+      "modifiedAt": "2025-06-06T14:21:58.974Z"
     },
     {
-      "id": "_zTl_EWDEH",
-      "uuid": "bc71b992-fd68-48a0-9685-6a0867a7c56a",
+      "id": "k04IyDV8gw",
+      "uuid": "8359f244-479f-481d-93fd-c1f1c364f585",
       "userId": "uBmeaz5pX",
-      "transactionId": "fFNmg3c1-",
+      "transactionId": "IAg4alNe9",
       "status": "received",
       "isRead": false,
-      "createdAt": "2025-06-06T12:10:49.745Z",
-      "modifiedAt": "2025-06-06T12:10:49.745Z"
-    },
-    {
-      "id": "5Kcvn5AAuk",
-      "uuid": "9e72c780-cbe0-44da-ae4d-3e416b4b3f16",
-      "userId": "uBmeaz5pX",
-      "transactionId": "noDUDneCS",
-      "status": "received",
-      "isRead": false,
-      "createdAt": "2025-06-06T12:10:53.704Z",
-      "modifiedAt": "2025-06-06T12:10:53.704Z"
-    },
-    {
-      "id": "P5JGxKn-N6",
-      "uuid": "cee94397-3084-4921-8af3-0b8d13ddaeca",
-      "userId": "uBmeaz5pX",
-      "transactionId": "KNm4Oenjy",
-      "status": "received",
-      "isRead": false,
-      "createdAt": "2025-06-06T12:22:24.239Z",
-      "modifiedAt": "2025-06-06T12:22:24.239Z"
+      "createdAt": "2025-06-06T14:22:03.175Z",
+      "modifiedAt": "2025-06-06T14:22:03.175Z"
     }
   ],
   "banktransfers": [
@@ -11095,14 +11029,14 @@
       "modifiedAt": "2024-03-07T13:32:42.472Z"
     },
     {
-      "id": "s0yItHn36i",
-      "uuid": "20089f9d-14c0-4c90-8c0a-bcc287ce7e36",
+      "id": "TZIZNXnMcU",
+      "uuid": "2ae93aa1-1253-4125-9f1a-4e72f08affe4",
       "userId": "M1ty1gR8B3",
       "amount": 9999999999999883000,
-      "transactionId": "noDUDneCS",
+      "transactionId": "IAg4alNe9",
       "type": "withdrawal",
-      "createdAt": "2025-06-06T12:10:53.692Z",
-      "modifiedAt": "2025-06-06T12:10:53.692Z"
+      "createdAt": "2025-06-06T14:22:03.156Z",
+      "modifiedAt": "2025-06-06T14:22:03.156Z"
     }
   ]
 }

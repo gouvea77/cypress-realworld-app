@@ -9,8 +9,8 @@ class HomePage {
     const selectors = {
       nextButton: '[data-test="user-onboarding-next"]',
       inputBankName: "#bankaccount-bankName-input",
-      imputRoutingNumber: "#bankaccount-routingNumber-input",
-      imputAccountNumber: "#bankaccount-accountNumber-input",
+      inputRoutingNumber: "#bankaccount-routingNumber-input",
+      inputAccountNumber: "#bankaccount-accountNumber-input",
       buttonSave: '[data-test="bankaccount-submit"]',
       buttonNewTransfer: '[data-test="nav-top-new-transaction"]',
       amountField: "#amount",
@@ -19,7 +19,7 @@ class HomePage {
       modal: "[role='dialog']",
       contact: '[data-test="user-list-item-GjWovtg2hr"]',
       buttonMyTransactions: '[data-test="nav-personal-tab"]',
-      butttonHome: "[data-test='sidenav-home']",
+      buttonHome: "[data-test='sidenav-home']",
     };
 
     return selectors;
@@ -32,8 +32,8 @@ class HomePage {
   createBankAccount() {
     cy.contains("Account Balance");
     cy.get(this.selectorList().inputBankName).type("Nubank");
-    cy.get(this.selectorList().imputRoutingNumber).type("1 234 44 ");
-    cy.get(this.selectorList().imputAccountNumber).type("2199999999");
+    cy.get(this.selectorList().inputRoutingNumber).type("1 234 44 ");
+    cy.get(this.selectorList().inputAccountNumber).type("2199999999");
     cy.get(this.selectorList().buttonSave).click();
   }
 
@@ -74,14 +74,14 @@ class HomePage {
   }
 
   verifySuccessfulTransactionInHistory() {
-    cy.get(this.selectorList().butttonHome).click();
+    cy.get(this.selectorList().buttonHome).click();
     cy.get(this.selectorList().buttonMyTransactions).click();
     cy.contains("Transfer Test").should("be.visible");
     cy.contains(`${userData.user.firstName} ${userData.user.lastName} paid`).should("be.visible");
   }
 
   verifyNoTransactionHistory() {
-    cy.get(this.selectorList().butttonHome).click();
+    cy.get(this.selectorList().buttonHome).click();
     cy.get(this.selectorList().buttonMyTransactions).click();
     cy.contains("No Transactions").should("be.visible");
   }
