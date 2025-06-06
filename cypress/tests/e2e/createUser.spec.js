@@ -58,14 +58,14 @@ describe("Testando a funcionalidade de criar novos usuários", () => {
     signUpPage.createNewUser(
       userData.newUser.userFirstName,
       userData.newUser.userLastName,
-      userData.userSuccess.username,
-      userData.userSuccess.password,
+      userData.newUser.username,
+      userData.newUser.password,
       userData.newUser.password
     );
     signUpPage.clickButtonConfirm();
   });
 
-  it.only("Deve acessar a página de login", () => {
+  it("Deve acessar a página de login", () => {
     cy.visit("http://localhost:3000/signin");
     signUpPage.clickButtonSignIn();
   });
