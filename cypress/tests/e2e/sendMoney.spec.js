@@ -5,7 +5,7 @@ import HomePage from "../pages/homePage";
 
 const loginPage = new LoginPage();
 const homePage = new HomePage();
-let value = 0;
+
 describe("Enviar dinheiro caso o saldo seja suficiente", () => {
   it("Deve enviar dinheiro com sucesso", () => {
     cy.visit("http://localhost:3000/signin");
