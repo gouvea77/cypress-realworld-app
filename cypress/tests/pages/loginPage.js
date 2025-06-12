@@ -8,6 +8,7 @@ class LoginPage {
       buttonSignUp: '[data-test="signup"]',
       buttonLogin: '[data-test="signin-submit"]',
       errorCredentialMessage: '[data-test="signin-error"]',
+      titlePage: ".MuiTypography-h5",
     };
 
     return selectors;
@@ -35,6 +36,10 @@ class LoginPage {
 
   checkUsernameRequiredError() {
     cy.contains("Username is required").should("be.visible");
+  }
+
+  verifyPageSignUp() {
+    cy.contains(this.selectorList().titlePage, "Sign Up").should("be.visible");
   }
 }
 

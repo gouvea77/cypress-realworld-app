@@ -56,21 +56,27 @@ class HomePage {
     });
   }
 
-  checkBalance(value) {
-    cy.get('[data-test="sidenav-user-balance"]')
+  getBalance() {
+    return cy
+      .get('[data-test="sidenav-user-balance"]')
       .invoke("text")
       .then((text) => {
         const balance = parseFloat(text.replace(/[^\d.-]/g, ""));
-        if (balance < value) {
-          this.newTransaction(value);
-          cy.contains("Insufficient balance").should("be.visible");
-        }
-        if (balance >= value) {
-          this.newTransaction(value);
-          cy.contains("Transaction Submitted!").should("be.visible");
-          cy.contains("Paid").should("be.visible");
-        }
+        return balance;
       });
+  }
+
+  checkBalance(value) {
+    this.getBalance().then((balance) => {
+      if (balance < value) {
+        this.newTransaction(value);
+        cy.contains("Insufficient balance").should("be.visible");
+      } else {
+        this.newTransaction(value);
+        cy.contains("Transaction Submitted!").should("be.visible");
+        cy.contains("Paid").should("be.visible");
+      }
+    });
   }
 
   verifySuccessfulTransactionInHistory() {

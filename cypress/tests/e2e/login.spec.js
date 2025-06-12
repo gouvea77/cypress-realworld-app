@@ -13,7 +13,7 @@ describe("Cenários de Login", () => {
 
   it("Erro ao Logar com Usuário Não Registrado", () => {
     cy.visit("http://localhost:3000/signin");
-    loginPage.loginWithAnyUser(userData.userFail.username, userData.userFail.password);
+    loginPage.loginWithAnyUser(userData.userFail.username, userData.user.password);
     loginPage.clickButtonSignIn();
     loginPage.checkLoginInvalidCredentials();
   });
@@ -34,5 +34,6 @@ describe("Cenários de Login", () => {
   it("Acessar pagina de cadastro pelo login", () => {
     cy.visit("http://localhost:3000/signin");
     loginPage.clickButtonSignUp();
+    loginPage.verifyPageSignUp();
   });
 });
